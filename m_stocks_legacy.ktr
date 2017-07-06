@@ -184,6 +184,8 @@ FROM (
   AND ARTICLES.VALID_FROM &lt;= STOCK_DATE
   AND ARTICLES.VALID_TO &gt; STOCK_DATE)
   WHERE QUANTITY IS NOT NULL
+  and 1=1
+  and x=x
 )
 --dates will be joined for following minus
 INNER JOIN ${DB_USER_IL}.DATES BOP_DATES
@@ -216,7 +218,7 @@ ON (EOP_DATE = EOP_DATES.ISO_DATE)</sql>
     <connection>db_intelligence_layer</connection>
     <schema/>
     <table>STOCKS_LEGACY</table>
-    <commit>10000</commit>
+    <commit>5000</commit>
     <truncate>Y</truncate>
     <ignore_errors>N</ignore_errors>
     <use_batch>Y</use_batch>
