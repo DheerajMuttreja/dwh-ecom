@@ -184,8 +184,8 @@ FROM (
   AND ARTICLES.VALID_FROM &lt;= STOCK_DATE
   AND ARTICLES.VALID_TO &gt; STOCK_DATE)
   WHERE QUANTITY IS NOT NULL
-  and 1=1
-  and x=z
+  and 2=2
+  and z=z
 )
 --dates will be joined for following minus
 INNER JOIN ${DB_USER_IL}.DATES BOP_DATES
